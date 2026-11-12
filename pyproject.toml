@@ -1,0 +1,19 @@
+[project]
+name = "assignment06-ecommerce"
+version = "0.3.0"
+description = "Systems Analysis and Design: May storefront with transactional commerce and DBSCAN recommendations"
+requires-python = ">=3.12"
+dependencies = ["fastapi>=0.136,<1", "uvicorn>=0.52,<1", "httpx>=0.28,<1", "pillow>=12,<13"]
+
+[project.optional-dependencies]
+encoders = ["sentence-transformers>=5,<6"]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["backend", "backend.*"]
+
+[tool.setuptools.package-data]
+backend = ["catalog.json", "ami_prompt.txt"]

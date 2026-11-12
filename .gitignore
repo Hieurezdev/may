@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.env*
+!.env.example
+data/
+.DS_Store
+node_modules/
+
+*.egg-info/
+output/
+tmp/
+vp-native-plugin/
+vp-report-plugin/

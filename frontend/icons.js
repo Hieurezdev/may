@@ -1,0 +1,43 @@
+const paths = {
+  music:'<path d="M9 18V5l11-2v13M9 9l11-2"/><ellipse cx="6" cy="18" rx="3" ry="2.5"/><ellipse cx="17" cy="16" rx="3" ry="2.5"/>',
+  search:'<circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/>',
+  mic:'<rect x="9" y="2.5" width="6" height="12" rx="3"/><path d="M5.5 10.5v1.5a6.5 6.5 0 0 0 13 0v-1.5M12 18.5V22m-4 0h8"/>',
+  heart:'<path d="M20.8 4.8a5.5 5.5 0 0 0-7.8 0L12 5.9l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.4a5.5 5.5 0 0 0 0-7.8Z"/>',
+  bag:'<path d="M4 7h16l1 14H3L4 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/>',
+  user:'<circle cx="12" cy="7" r="4"/><path d="M4 22v-2a8 8 0 0 1 16 0v2"/>',
+  arrow:'<path d="M4 12h16m-6-6 6 6-6 6"/>',
+  chevron:'<path d="m9 5 7 7-7 7"/>',
+  down:'<path d="m6 9 6 6 6-6"/>',
+  close:'<path d="m6 6 12 12M6 18 18 6"/>',
+  plus:'<path d="M12 5v14M5 12h14"/>',
+  minus:'<path d="M5 12h14"/>',
+  check:'<path d="m5 12 4 4 10-10"/>',
+  star:'<path d="m12 2 3 6.1 6.7 1-4.8 4.7 1.1 6.7-6-3.2-6 3.2 1.1-6.7-4.8-4.7 6.7-1L12 2Z"/>',
+  sparkle:'<path d="m12 3 2.3 6.7L21 12l-6.7 2.3L12 21l-2.3-6.7L3 12l6.7-2.3L12 3Zm7-2v4m-2-2h4"/>',
+  truck:'<path d="M1 4h13v13H1zm13 5h5l4 5v3h-9"/><circle cx="5" cy="18" r="3"/><circle cx="18" cy="18" r="3"/>',
+  refresh:'<path d="M20 7a9 9 0 1 0 1 9M20 2v6h-6"/>',
+  shield:'<path d="m12 2 9 4v6c0 6-9 10-9 10S3 18 3 12V6l9-4Z"/><path d="m8 12 3 3 5-6"/>',
+  ticket:'<path d="M3 5h18v5a2 2 0 0 0 0 4v5H3v-5a2 2 0 0 0 0-4V5Z"/><path d="M9 5v14m5-10h3m-3 6h3"/>',
+  shirt:'<path d="m8 3-6 4 3 5 3-2v11h8V10l3 2 3-5-6-4a4 4 0 0 1-8 0Z"/>',
+  trousers:'<path d="M6 3h12l2 18h-6l-2-11-2 11H4L6 3Z"/><path d="M6 6h12m-6-3v7"/>',
+  dress:'<path d="m9 2-3 3 3 6-6 11h18l-6-11 3-6-3-3a3 3 0 0 1-6 0Z"/><path d="M9 11h6"/>',
+  jacket:'<path d="m8 3-5 4-2 12 5 1 2-9v11h8V11l2 9 5-1-2-12-5-4-4 4-4-4Z"/><path d="M12 7v15m-4-8h2m4 0h2"/>',
+  shoe:'<path d="M3 7h5l3 6 7 2c3 1 4 3 4 6H2V9l1-2Z"/><path d="M2 18h19m-9-5-2 3m5-2-2 3"/>',
+  glasses:'<path d="M3 9h6l2 2h2l2-2h6v7H15l-2-5h-2l-2 5H3V9Z"/><path d="M3 9 1 5m20 4 2-4"/>',
+  watch:'<rect x="6" y="7" width="12" height="11" rx="4"/><path d="M9 7V2h6v5m-6 11v4h6v-4m-3-8v3l2 1"/>',
+  menu:'<path d="M4 6h16M4 12h16M4 18h16"/>',
+  chat:'<path d="M21 11a9 9 0 0 1-9 9H3l1-5a9 9 0 1 1 17-4Z"/><path d="M8 10h8m-8 4h5"/>',
+  send:'<path d="m22 2-7 20-4-9-9-4L22 2Zm0 0L11 13"/>',
+  upload:'<path d="M12 16V3m-5 5 5-5 5 5M3 16v5h18v-5"/>',
+  camera:'<path d="M3 7h4l2-3h6l2 3h4v14H3V7Z"/><circle cx="12" cy="13" r="4"/>',
+  download:'<path d="M12 3v13m-5-5 5 5 5-5M3 17v5h18v-5"/>',
+  trash:'<path d="M3 6h18M9 6V3h6v3M5 6l1 16h12l1-16M10 10v8m4-8v8"/>',
+  lock:'<rect x="4" y="10" width="16" height="12" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4m-4 4v4"/>',
+  box:'<path d="m12 2 10 5v12l-10 4-10-4V7l10-5Zm0 10v11M2 7l10 5 10-5M7 4.5l10 5"/>',
+  info:'<circle cx="12" cy="12" r="10"/><path d="M12 11v6m0-10v1"/>',
+};
+
+/** @param {string} name @param {string} [className] */
+export function icon(name, className = '') {
+  return '<svg class="icon ' + className + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (paths[name] || paths.shirt) + '</svg>';
+}
